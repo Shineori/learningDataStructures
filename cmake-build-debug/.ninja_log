@@ -1,0 +1,8 @@
+# ninja log v6
+7	326	7538105006121486	CMakeFiles/learningDataStructures.dir/queue.cpp.obj	f4a27e3964981a43
+5	91	7538114619104920	learningDataStructures.exe	fba0100a1a549561
+7	329	7538114319919028	CMakeFiles/learningDataStructures.dir/maintest.cpp.obj	c5b56334febd1257
+3	216	7538115485554726	build.ninja	87ece912b1fa8c9f
+3	244	7538115485554726	build.ninja	87ece912b1fa8c9f
+2	318	7538115485983379	CMakeFiles/learningDataStructures.dir/queuing.cpp.obj	f10df552d65455ce
+319	404	7538115489148662	learningDataStructures.exe	27b45746c7eb8e08
