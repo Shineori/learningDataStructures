@@ -3,19 +3,20 @@
 
 using namespace std;
 
+const int MAX_SIZE = 15;
 int top = -1;
-int arr[15] = {0};
+int arr[MAX_SIZE] = {0};
 
 bool isEmpty() {
     return top == -1;
 }
 
 bool isFull() {
-    return top == 14;
+    return top == MAX_SIZE - 1;
 }
 
 void push(int val) {
-    if (val > 99) {
+    if (val < 0 || val > 99) {
         cout << "Value is too large, please choose something from 0 to 99" << endl;
         return;
     }
@@ -47,19 +48,26 @@ int peek(int pos) {
     if (isEmpty()) {
         cout << "Stack Underflow Occurring" << endl;
         return 0;
-    } else {
-        return arr[pos];
     }
+    if (pos < 0 || pos > top) {
+        cout << "Invalid position" << endl;
+        return 0;
+    }
+    return arr[pos];
 }
 
 void change(int pos, int val) {
+    if (pos < 0 || pos > top) {
+        cout << "Invalid position" << endl;
+        return;
+    }
     arr[pos] = val;
     cout << "Value changed at specified location " << pos << endl;
 }
 
 void display() {
     cout << "All values in the stack are: " << endl;
-    for (int i = 14; i >= 0; i--) {
+    for (int i = MAX_SIZE - 1; i >= 0; i--) {
         cout << arr[i] << endl;
     }
 }
